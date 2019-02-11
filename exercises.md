@@ -51,3 +51,65 @@ We want to make our TSConfig more strict and more "browser safe".
    - noStrictGenericChecks
    - noUnusedLocals
 2. only import lib "es2015" and "dom"
+
+## 1C. linting
+
+### todo presentation material
+
+- extend linting rules
+- external linting rules
+
+  - codelyzer
+  - rxjs linter
+  - ...
+
+- linters
+
+  - scss linter
+  - html linter
+
+- list all the "default" rules by tslint + codelyzer
+- where to configure linting rules (named file, custom named file, package.json, ...)
+
+### What we want to do
+
+We want to improve quality by having code quality checks using linters.
+
+### Steps
+
+1. Add a few codelyzer rules for all projects (http://codelyzer.com/rules/)
+   - banana-in-box
+   - contextual-life-cycle
+   - decorator-not-allowed
+   - pipe-impure
+   - templates-no-negated-async
+   - no-attribute-parameter-decorator
+   - no-conflicting-life-cycle-hooks
+   - no-forward-ref
+   - no-template-call-expression
+   - prefer-output-readonly
+     ...
+2. (extra) activate linting for hml
+
+   - install htmlhint (https://github.com/htmlhint/HTMLHint)
+   - configure htmlhint (https://github.com/htmlhint/HTMLHint/wiki/Rules) => TODO: check if the list below is correct!!!
+     - "tagname-lowercase"
+     - "attr-lowercase": false,
+     - "attr-value-double-quotes"
+     - "tag-pair"
+     - "spec-char-escape"
+     - "id-unique"
+     - "src-not-empty"
+     - "attr-no-duplication"
+     - "title-require"
+     - "tag-self-close"
+     - "doctype-html5"
+     - "style-disabled"
+     - "attr-unsafe-chars"
+     - "id-class-value": "dash"
+   - execute linting using npm command
+
+3. (extra) activate linting for scss
+   - install stylelint (https://github.com/stylelint/stylelint)
+   - configure stylelint (https://github.com/stylelint/stylelint-config-recommended)
+   - execute linting using npm command
