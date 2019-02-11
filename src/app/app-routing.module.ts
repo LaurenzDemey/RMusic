@@ -1,16 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { HotlistComponent } from './hotlist/hotlist.component';
-import { LibraryComponent } from './library/library.component';
-import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'hotlist', component: HotlistComponent },
-  { path: 'library', component: LibraryComponent },
-  { path: 'search', component: SearchComponent },
+  { path: 'hotlist', loadChildren: 'src/app/hotlist/hotlist.module#HotlistModule' },
+  { path: 'library', loadChildren: 'src/app/library/library.module#LibraryModule' },
+  { path: 'search', loadChildren: 'src/app/search/search.module#SearchModule' },
   { path: '**', redirectTo: '/home' }
 ];
 

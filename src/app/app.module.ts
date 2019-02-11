@@ -1,17 +1,21 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HotlistComponent } from './hotlist/hotlist.component';
-import { LibraryComponent } from './library/library.component';
-import { SearchComponent } from './search/search.component';
+import { HomeModule } from './home';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, HotlistComponent, LibraryComponent, SearchComponent],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  declarations: [AppComponent],
+  imports: [
+    // application wide module
+    BrowserModule,
+
+    // routing
+    AppRoutingModule,
+
+    // initial route module
+    HomeModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -262,3 +262,24 @@ We want to create a base structure for each page with a menu on top
 9. install "webpack-bundle-analyzer" as dev-dependency
 10. add npm script for inspecting bundle size ("ng build --prod --stats-json && webpack-bundle-analyzer dist/RMusic/stats.json")
 11. look what happens with the bundle when you don't build for prod (check main.js/src/app)
+
+## 2B. lazy load
+
+### todo presentation material
+
+- how to lazy load module
+- not lazy load initial route
+- different ways to create modules
+
+### What we want to do
+
+We want to optimize code using lazy loading + add more structure
+
+### Steps
+
+1. create a module for each page (tip: --routing flag)
+2. move the page component to each module
+3. adapt the routing to lazy load the module (except home)
+4. cleanup appModule
+5. Test you application, if everything works as expected.
+6. checkout ngRev again
