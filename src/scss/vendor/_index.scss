@@ -1,0 +1,15 @@
+// And last but not least, most projects will have a vendors/ folder containing all
+// the CSS files from external libraries and frameworks – Normalize, Bootstrap, jQueryUI,
+// FancyCarouselSliderjQueryPowered, and so on. Putting those aside in the same folder is a
+// good way to say “Hey, this is not from me, not my code, not my responsibility”.
+
+// Import vendor variables overrides
+@import 'vendor-variables-overrides';
+
+// Import normalization css before other vendor code
+@import 'normalize';
+
+// Import external specific vendor styles
+
+// Import vendor overrides
+@import 'vendor-overrides';

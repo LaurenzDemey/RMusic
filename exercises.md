@@ -283,3 +283,55 @@ We want to optimize code using lazy loading + add more structure
 4. cleanup appModule
 5. Test you application, if everything works as expected.
 6. checkout ngRev again
+
+## 3A. SCSS 7-1 pattern
+
+### todo presentation material
+
+- explain scss vs SASS
+- short intro what's possible
+- 7-1 pattern
+- partial files
+- !default
+- importing partial files / node_modules
+
+### What we want to do
+
+We want to create a more structured way on how to implement scss.
+
+### Steps
+
+1. create a folder called "scss" inside the "src" folder.
+2. create the following structure within the "scss" folder
+
+- base
+  - \_\_index.scss
+  - \_scroller.scss
+  - \_typography.scss
+  - \_anchor-tags.scss
+  - \_body.scss
+- layout
+  - \_\_index.scss
+  - \_grid-system.scss
+- variables
+  - \_\_index.scss
+  - \_colors.scss
+  - \_fonts.scss
+- vendor
+  - \_\_index.scss
+  - \_vendor-overrides.scss
+  - \_normalize.scss
+  - \_vendor-variables-overrides.scss
+- main.scss
+
+3. adapt your angular.json to use the new "src/scss/main.scss" file
+4. remove styles.scss
+5. look on how to import partial scss files
+
+- main.scss should only import \_\_index.scss files from base, layout, variables, vendor)
+- \_\_index.scss should import it's content in the right order
+
+6. update background-color to #131313 (using \_variables.scss and \_body.scss)
+7. adapt all heading elements + paragraph to the color "white"
+8. have some normalization css added into "\_normalize.scss"
+9. Verify that everything is working correctly by starting your application.
