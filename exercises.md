@@ -113,3 +113,28 @@ We want to improve quality by having code quality checks using linters.
    - install stylelint (https://github.com/stylelint/stylelint)
    - configure stylelint (https://github.com/stylelint/stylelint-config-recommended)
    - execute linting using npm command
+
+## 1D. npm scripts
+
+### todo presentation material
+
+- why "ng": "ng" => .bin local executable
+- life cycle hooks
+- keyword scripts (prepublishOnly, preinstall, ...)
+- grouping?
+- lint fixers + integrate into IDE
+- difference between calling tslint directly VS ng lint
+- npm spawn process using && (serial and stop if 1 fails) VS ; (serial but executes even if first fails) vS & (parallel, but doesn't work on windows)
+- npm-run-all
+
+### What we want to do
+
+Add linting tools so that it's easy to use. We are also going to activate the automatic fixers.
+
+### Steps
+
+1. add npm script for linting TS
+2. add npm script for linting HTML
+3. add npm script for linting SCSS
+4. add npm script to execute all linting
+5. add npm script to fix all lint issues automatic using fixers
