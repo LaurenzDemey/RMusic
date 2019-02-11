@@ -335,3 +335,29 @@ We want to create a more structured way on how to implement scss.
 7. adapt all heading elements + paragraph to the color "white"
 8. have some normalization css added into "\_normalize.scss"
 9. Verify that everything is working correctly by starting your application.
+
+## 3B. Layout
+
+### todo presentation material
+
+- expose images? already done, no?
+- shared component
+- why i create new module instead of appComponent
+- smart / dumb components
+- routing component VS template component (entry component)
+
+### What we want to do
+
+We want to create a beautiful layout for our application
+
+### Steps
+
+1. Create a new module named "layout"
+2. create a new component named "layout" inside the "layout" module
+3. adapt the component to visualize
+
+- logo
+- name application
+- menu
+
+4. use the new layout component inside the appComponent

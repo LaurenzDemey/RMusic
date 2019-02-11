@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeModule } from './home';
+import { LayoutModule } from './layout';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,6 +13,9 @@ import { HomeModule } from './home';
 
     // routing
     AppRoutingModule,
+
+    // layout module for app layout
+    LayoutModule,
 
     // initial route module
     HomeModule

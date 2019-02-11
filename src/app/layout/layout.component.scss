@@ -1,0 +1,71 @@
+.topbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  z-index: 99999;
+}
+
+.topbar {
+  display: flex;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0);
+
+  .logo {
+    flex: 1;
+    display: flex;
+    color: white;
+    line-height: 64px;
+    font-weight: 500;
+    font-size: 45px;
+
+    span {
+      padding-left: 8px;
+    }
+
+    img {
+      height: 48px;
+      padding: 7px 0 0 24px;
+    }
+  }
+
+  .center-content {
+    .menu-list {
+      display: flex;
+      justify-content: center;
+      padding: unset;
+      height: 100%;
+      margin: unset;
+      list-style: none;
+
+      .menu-item {
+        margin: 0 24px 0 24px;
+        line-height: 64px;
+
+        .menu-item-link {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 20px;
+          font-weight: 500;
+          text-decoration: none;
+          font-family: Roboto-Regular;
+
+          &:hover {
+            color: rgba(255, 255, 255, 1);
+          }
+
+          &.router-link-active {
+            color: rgba(255, 255, 255, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 64px 0 24px 0;
+  padding-top: 16vh;
+}
