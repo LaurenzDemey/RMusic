@@ -161,6 +161,8 @@ Align formatting for the whole team by using prettier. To make this work perfect
 4. add prettier linting rules for tslint (https://github.com/prettier/tslint-config-prettier)
 5. (extra) add prettier linting rules for stylelint (https://github.com/prettier/stylelint-config-prettier)
 
+# 2. Structure
+
 ## 2A. pages
 
 ### todo presentation material
