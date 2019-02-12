@@ -181,65 +181,29 @@ We want to create a base structure for each page with a menu on top
 2. replace favicon to index.html to support all formats
 
 ```html
-<link rel="shortcut icon" href="assets/images/favicon/favicon.ico" type="image/x-icon" />
-<link
-  rel="apple-touch-icon"
-  sizes="57x57"
-  href="assets/images/favicon/apple-touch-icon-57x57.png"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="60x60"
-  href="assets/images/favicon/apple-touch-icon-60x60.png"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="72x72"
-  href="assets/images/favicon/apple-touch-icon-72x72.png"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="76x76"
-  href="assets/images/favicon/apple-touch-icon-76x76.png"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="114x114"
-  href="assets/images/favicon/apple-touch-icon-114x114.png"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="120x120"
-  href="assets/images/favicon/apple-touch-icon-120x120.png"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="144x144"
-  href="assets/images/favicon/apple-touch-icon-144x144.png"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="152x152"
-  href="assets/images/favicon/apple-touch-icon-152x152.png"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="assets/images/favicon/apple-touch-icon-180x180.png"
-/>
-<link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16" />
-<link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32" />
-<link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon-180x180.png" />
+<link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
 <link
   rel="icon"
   type="image/png"
-  href="assets/images/favicon/android-chrome-192x192.png"
+  href="assets/favicon/android-chrome-192x192.png"
   sizes="192x192"
 />
-<meta name="msapplication-square70x70logo" content="assets/images/favicon/smalltile.png" />
-<meta name="msapplication-square150x150logo" content="assets/images/favicon/mediumtile.png" />
-<meta name="msapplication-wide310x150logo" content="assets/images/favicon/widetile.png" />
-<meta name="msapplication-square310x310logo" content="assets/images/favicon/largetile.png" />
+<meta name="msapplication-square70x70logo" content="assets/favicon/smalltile.png" />
+<meta name="msapplication-square150x150logo" content="assets/favicon/mediumtile.png" />
+<meta name="msapplication-wide310x150logo" content="assets/favicon/widetile.png" />
+<meta name="msapplication-square310x310logo" content="assets/favicon/largetile.png" />
 ```
 
 3. generate 4 empty components
@@ -345,6 +309,7 @@ We want to create a more structured way on how to implement scss.
 - why i create new module instead of appComponent
 - smart / dumb components
 - routing component VS template component (entry component)
+- font icon
 
 ### What we want to do
 
@@ -361,3 +326,4 @@ We want to create a beautiful layout for our application
 - menu
 
 4. use the new layout component inside the appComponent
+5. add a font-icon and use it (search icon in menu)
