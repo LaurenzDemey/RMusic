@@ -393,3 +393,13 @@ We want to create a beautiful layout for our application
 ### What we want to
 
 ### Steps
+
+# 7. Extra
+
+## 7A. Tabs
+
+### todo presentation material
+
+### What we want to
+
+### Steps
