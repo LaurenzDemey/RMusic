@@ -375,3 +375,13 @@ We want to create a beautiful layout for our application
 ### What we want to
 
 ### Steps
+
+# 6. Music player
+
+## 6A. Player component
+
+### todo presentation material
+
+### What we want to
+
+### Steps
