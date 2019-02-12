@@ -161,6 +161,8 @@ Align formatting for the whole team by using prettier. To make this work perfect
 4. add prettier linting rules for tslint (https://github.com/prettier/tslint-config-prettier)
 5. (extra) add prettier linting rules for stylelint (https://github.com/prettier/stylelint-config-prettier)
 
+# 2. Structure
+
 ## 2A. pages
 
 ### todo presentation material
@@ -247,6 +249,8 @@ We want to optimize code using lazy loading + add more structure
 4. cleanup appModule
 5. Test you application, if everything works as expected.
 6. checkout ngRev again
+
+# 3. Styling
 
 ## 3A. SCSS 7-1 pattern
 
