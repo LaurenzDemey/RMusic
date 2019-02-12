@@ -403,3 +403,11 @@ We want to create a beautiful layout for our application
 ### What we want to
 
 ### Steps
+
+## 7B. Scroll behavior
+
+### todo presentation material
+
+### What we want to
+
+### Steps
