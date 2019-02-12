@@ -286,6 +286,8 @@ We want to optimize code using lazy loading + add more structure
 5. Test you application, if everything works as expected.
 6. checkout ngRev again
 
+# 3. Styling
+
 ## 3A. SCSS 7-1 pattern
 
 ### todo presentation material
