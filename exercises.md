@@ -331,3 +331,13 @@ We want to create a beautiful layout for our application
 
 4. use the new layout component inside the appComponent
 5. add a font-icon and use it (search icon in menu)
+
+# 4. Data visualization
+
+## 4A. Album / playlist / artist / song
+
+### todo presentation material
+
+### What we want to
+
+### Steps
