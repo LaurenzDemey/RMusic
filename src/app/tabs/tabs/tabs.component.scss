@@ -1,0 +1,31 @@
+.tab-headers {
+  border-bottom: 1px solid rgba(31, 162, 83, 0.2);
+}
+
+.tab-labels {
+  display: flex;
+  justify-content: center;
+}
+
+.tab-label {
+  display: inline-flex;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  padding: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+
+  &.active {
+    color: rgba(255, 255, 255, 1);
+    border-bottom: 2px solid rgb(31, 162, 83);
+  }
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.tab-content-container {
+  padding-top: 40px;
+  color: white;
+}
