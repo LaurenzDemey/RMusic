@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IChart, IChartService } from '../api';
+import { CHART_SERVICE } from '../api/injection-tokens';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  charts$: Observable<IChart[]>;
 
-  constructor() { }
+  constructor(@Inject(CHART_SERVICE) private chartService: IChartService) {}
 
   ngOnInit() {
+    this.charts$ = this.chartService.getChart();
   }
-
 }

@@ -1,3 +1,13 @@
-<p>
-  hotlist works!
-</p>
+<ng-container *ngFor="let album of album$ | async">
+  <app-album [artist]="album.artist"
+             [img]="album.img"
+             [name]="album.name"></app-album>
+</ng-container>
+<ng-container *ngIf="(playlistTracks$ | async) as trcks">
+  <ng-container *ngFor="let item of trcks.tracks">
+    <app-album [artist]="item.artist"
+               [img]="trcks.img"
+               [name]="item.name"></app-album>
+
+  </ng-container>
+</ng-container>
