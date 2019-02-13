@@ -1444,8 +1444,6 @@ We want to build a tabs component
 
 ## 7B. Scroll behavior
 
-### todo presentation material
-
 ### What we want to
 
 We want to create a directive that add a class on an element when a specific treshold is passed.
