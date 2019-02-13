@@ -338,6 +338,23 @@ We want to create a beautiful layout for our application
 
 ### todo presentation material
 
-### What we want to
+- dumb/smart components
+- show result what we want?
+- content projection
+- screenshot for each component?
+
+### What we want to do
+
+We want to build components to visualize 1 album or 1 playlist or 1 artist or 1 song. Depending on which type it needs to know which one to draw.
 
 ### Steps
+
+1. Create a new module called "singleValueModule"
+2. Create new components (albumComponent, songComponent, playlistComponent, artistComponent, roundComponent, squareComponent) (don't forget to export!)
+3. Adapt the square component to contain 2 content projection slots (app-square-cover & app-square-detail)
+4. style the square component so that the detail is below the cover slot. Adapt styling to your preference.
+5. Use the square component in the albumComponent. The cover contains an image. The detail should contain album name + artist name (there are assets available for testing the image)
+6. Do the same for the playlist component, but it contains a: image, playlist name and total tracks
+7. Adapt the round component just like the square component, but with different styling (cover needs to be rounded)
+8. Adapt the artist component to use the round component (image, name and followers)
+9. Adapt the song component to use the round component (image, song name and artist name)
