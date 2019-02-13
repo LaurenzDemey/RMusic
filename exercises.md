@@ -1111,7 +1111,7 @@ export const appConfig = {
 
 ## 5B. Deezer
 
-### What we want to
+### What we want to do
 
 We want to switch easily between different api's buy changeing the export statement in a barrelfile using injections token and service interfaces
 
