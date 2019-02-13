@@ -1,5 +1,5 @@
 <div class="tab-headers">
-  <div class="tab-labels">
+  <div class="tab-labels" [style.top.px]="scrollTreshold" [appScrollClass]="scrollTreshold">
     <div *ngFor="let tab of tabs" class="tab-label" [ngClass]="{active: tab.label===activeTab?.label}"
          (click)="setActiveTab(tab)">
       {{tab.label}}

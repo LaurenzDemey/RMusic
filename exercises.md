@@ -475,4 +475,20 @@ We want to build a tabs component
 
 ### What we want to
 
+We want to create a directive that add a class on an element when a specific treshold is passed.
+
 ### Steps
+
+1. add a new module called "scroll-class"
+2. add a new directive called "scrollClassDirective"
+3. update that directive to retrieve a treshold value (number)
+4. use a HostListener to listen for scroll events on the window object. Calculate if the position of the host component is higher than the scrollposition. Save this into a property
+5. use a hostBinding to add a class "scrolled" when that previous propery (is hostComponent higher than scrollposition) is true
+6. Before you can test it out, we need to add an @input (scrollTreshold) on TabsComponent to accept a specific treshold
+7. You can activate the appScrollClass attribute on the headers of the tabs (we only want to add a class on the headers, while the content should remain scrollable)
+8. pass the scrollTreshold to the appScrollClass
+9. adapt styling when the class "scrolled" is added (position fixed).
+10. work with inline style to style the "top" property using the scrollTreshold property
+11. Check if everything works
+12. (extra) You can also add the appScrollClass inside the layout component. For example to render a toolbar which is not transparant.
+13. (extra) Make your UI in the home page more beautiful by adding an image with transparant gradient
