@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, ContentChildren, QueryList } from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, Input, QueryList } from '@angular/core';
 import { TabDirective } from '../tab.directive';
 
 @Component({
@@ -7,6 +7,9 @@ import { TabDirective } from '../tab.directive';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements AfterContentInit {
+  @Input()
+  scrollTreshold: number;
+
   @ContentChildren(TabDirective)
   tabs: QueryList<TabDirective>;
 

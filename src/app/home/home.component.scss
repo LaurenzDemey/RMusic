@@ -1,0 +1,30 @@
+$height-img: 350px;
+
+.top-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+
+  img {
+    height: $height-img;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+    padding: 16vh 0 24px 0;
+    background-image: linear-gradient(to bottom, rgba(19, 19, 19, 0.5), #131313);
+    height: $height-img;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.content {
+  position: relative;
+}

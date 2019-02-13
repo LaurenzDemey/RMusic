@@ -7,6 +7,17 @@
   z-index: 99999;
 }
 
+.topbar-background {
+  background-color: #232323;
+  opacity: 0;
+  transition: opacity 0.2s;
+  will-change: opacity;
+
+  &.scrolled {
+    opacity: 1;
+  }
+}
+
 .topbar {
   display: flex;
   height: 64px;

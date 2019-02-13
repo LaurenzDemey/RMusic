@@ -5,6 +5,13 @@
 .tab-labels {
   display: flex;
   justify-content: center;
+
+  &.scrolled {
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #232323;
+  }
 }
 
 .tab-label {
