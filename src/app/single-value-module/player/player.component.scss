@@ -1,0 +1,190 @@
+@import '../../../scss/variables/_index';
+
+.player-container {
+  align-items: center;
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0 -1px 12px 0 rgba(25, 25, 34, 0.12);
+  display: flex;
+  height: 80px;
+  left: 0;
+  min-width: 990px;
+  padding: 0 24px;
+  position: sticky;
+  right: 0;
+  z-index: 300;
+
+  .player-controls {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #333;
+  }
+
+  .player-track {
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 0 72px;
+
+    .track-container {
+      margin: auto;
+      max-width: 800px;
+      width: 80%;
+
+      .track-header {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-bottom: 4px;
+        min-height: 32px;
+
+        .track-title {
+          flex: 10;
+        }
+        .track-actions {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex: 1;
+        }
+      }
+
+      .track-play-info {
+        display: flex;
+        height: 12px;
+        position: relative;
+        width: 100%;
+        align-items: center;
+
+        .track-slider-counter {
+          color: #c2c2ca;
+          position: absolute;
+          top: 0;
+          font-size: 10px;
+
+          &.slider-counter-current {
+            padding-right: 12px;
+            right: 100%;
+          }
+          &.slider-counter-max {
+            padding-left: 12px;
+            left: 100%;
+          }
+        }
+
+        .player-bar {
+          flex: 1;
+          height: 4px;
+          position: relative;
+          height: 2px;
+          z-index: 1;
+
+          .slider-track-default {
+            background-color: #dedee3;
+            width: 100%;
+            border-radius: 4px;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+          }
+          .slider-track-active {
+            border-radius: 4px;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            background-color: #32323d;
+            max-width: 100%;
+            width: 0;
+          }
+          .slider-track-input {
+            -webkit-appearance: none;
+            background: rgba(0, 0, 0, 0);
+            cursor: pointer;
+            height: 12px;
+            left: -6px;
+            margin-top: -6px;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            width: calc(100% + 12px);
+          }
+
+          input[type='range'] {
+            &::-webkit-slider-thumb {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              width: 0;
+              height: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .player-options {
+    flex: 1;
+    display: flex;
+
+    .player-options-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    .divider {
+      align-self: center;
+      background: transparent;
+      border: 1px solid #dedee3;
+      height: 28px;
+      width: 1px;
+      margin-left: 12px;
+    }
+    .queue-list {
+      flex: 1;
+      padding-left: 20px;
+
+      .queue-list-btn {
+        width: 100%;
+        text-transform: capitalize;
+        height: 42px;
+        border-radius: 4px;
+        display: flex;
+        padding: 8px 12px 8px 8px;
+        transition-duration: 0.15s;
+        transition-property: background-color;
+
+        .thumbnail {
+          border-radius: 4px;
+          box-shadow: 0 1px 6px rgba(25, 25, 34, 0.16);
+          display: inline-block;
+          margin: 0;
+          max-height: 100%;
+          max-width: 100%;
+          overflow: hidden;
+          position: relative;
+          transform: translateZ(0);
+          vertical-align: top;
+
+          .picture {
+            display: block;
+            position: relative;
+          }
+          .picture-img {
+            border: 0;
+            vertical-align: top;
+          }
+        }
+
+        .queuelist-label {
+          align-self: center;
+          color: #32323d;
+          line-height: 16px;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

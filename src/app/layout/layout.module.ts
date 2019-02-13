@@ -4,11 +4,12 @@ import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ApiModule } from '../api';
 import { ScrollClassModule } from '../scroll-class/scroll-class.module';
+import { SingleValueModule } from '../single-value-module';
 import { LayoutComponent } from './layout.component';
 
 @NgModule({
   declarations: [LayoutComponent],
-  imports: [CommonModule, RouterModule, FontAwesomeModule, ScrollClassModule, ApiModule],
+  imports: [CommonModule, RouterModule, FontAwesomeModule, ScrollClassModule, ApiModule, SingleValueModule],
   exports: [LayoutComponent]
 })
 export class LayoutModule {}

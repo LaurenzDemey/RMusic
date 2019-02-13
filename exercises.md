@@ -1414,13 +1414,103 @@ Make sure to use Rxjs operators to become the expected return results
 
 ## 6A. Player component
 
-### todo presentation material
-
 ### What we want to
 
 We want to create a music player, which handles play, pause, next and previous
 
 ### Steps
+1. inside the single-value-module folder create a new component named "player". Also create a service folder with a music.service.ts file.
+2. add styling to the player component. A possible layout of the player could be like the one from deezer it self (https://www.deezer.com/en/)
+3. add global styling in scss folder using the 7-1 pattern for:
+
+- button
+- some normalized scss
+- font family,
+- ...
+
+3. add the player component to the layout component. How does your player looks like?
+
+- you can use fontawesome from the first steps to add icons to the player
+
+4. implement a click handler when clicking on the play icon for every component (album, artist, playlist and song). You should receive the album, playlist, song or artist in the music.service
+   HINT: you may have to add additional input properties on the different component types mentioned above
+
+5. implement the music service. What needs to be implemented?
+
+- we will need to inject the differen services created in step 5
+- an HTMLAudioElement and instance of the Audio class
+- a playing, and loading function to load and ofcourse play the audio
+- the selectedtracklist collected from the overlay play button click
+  HINT: RXJS
+- we also need an API call to get a song, an album, an artist or a playlist.
+  HINT: RXJS
+- we will also need a time formating function to transform seconds to more readable text like "01:42" instead of 102 seconds
+
+6. implement the player component. What needs to be implemented?
+
+ONINIT:
+
+- the Audio instance has some audio eventlisteners added when instantating. Wrap each of the following audio event in an RxJs fromEvent function.
+
+  - onplay
+
+    - when the onplay event is triggered the play button should change to pause button
+    - the music should be played
+
+  - onended
+
+    - when the onended event is triggered the pause button should change to play button
+    - the music should be paused
+
+  - ontimeupdate
+
+    - this event should update the song progress bar of every second between the minimun song time and the maximum song time (%)
+    - the readable time labels (start of the song en end of the song) should also be updated when this event is triggered.
+
+  - we want to register those event on init of the player component.
+
+- Next we want to keep hold of the current playing index. This way we know which song to visualise in the player html.
+  - create a behavior subject which has an initial value of
+  ```typescript
+  {
+    state: 'initial',
+    i: 0
+  }
+  ```
+  When a user clicks on a card the behavior subject is triggered with the initial state. We will implement this behavior later on.
+- the next step is to get the selected track list from the music player. Make sure that the result is shared between every subscriber.  
+  (HINT: RXJS operators)
+  - add some logic to show the next button when the length of the selected track list is greater than 1
+  - make sure that the same result is filtered out
+
+NEXT & PREVIOUS
+
+- impement the next button click and previous button click.
+  - update the currentPlayingIndex behavior subject by emitting a new state.  
+    Remember what we have passed to the behavior subject as initial value
+    - next should play the next song
+    - previous should play the previous song
+
+BUT NOTHING IS WORKING NOW???  
+Correct! We need to bind all the streams together.
+
+- create a reducer like RxJs function to calculate the state and the index of the new song.
+- combine the playing list, retreived when clicking on a card, with the last calculated state from the currentPlayingIndex observable.
+
+  - map this so that the audio instance plays the next song
+  - display the current playing song in the player component  
+    HINT: ASYNC PIPE
+
+- ADDITIONAL:
+  - let the player automatically play the next song
+  - hide or show the next and previous button depending on wether there is a next or previous song.
+
+DOES IT WORK?
+
+- try to play a song
+- click on the next button
+- click on the previous button
+- pause a song
 
 # 7. Extra
 
