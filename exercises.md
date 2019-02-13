@@ -1414,8 +1414,6 @@ Make sure to use Rxjs operators to become the expected return results
 
 ## 6A. Player component
 
-### todo presentation material
-
 ### What we want to
 
 We want to create a music player, which handles play, pause, next and previous
