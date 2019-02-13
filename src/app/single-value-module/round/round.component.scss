@@ -1,0 +1,49 @@
+@import '../../../scss/variables/_index';
+
+$color-primary: $color-text-primary;
+$color-secondary: $color-text-secondary;
+$round-width: 190px;
+$round-gutter: 8px;
+
+// TODO
+.round-container {
+  width: $round-width;
+}
+
+.round-detail {
+  margin-top: $round-gutter;
+  text-align: center;
+
+  ::ng-deep {
+    .primary-label {
+      color: $color-primary;
+      font-size: 16px;
+      font-weight: 350;
+      margin-top: 8px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .secondary-label {
+      color: $color-secondary;
+      font-size: 16px;
+      font-weight: 250;
+      line-height: 20px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.round-cover {
+  border-radius: $round-width / 2;
+  overflow: hidden;
+  width: $round-width;
+  height: $round-width;
+
+  &::ng-deep img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
