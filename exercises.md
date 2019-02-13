@@ -324,7 +324,7 @@ We want to create a more structured way on how to implement scss.
 - vendor
   - \_\_index.scss
   - \_vendor-overrides.scss
-  - \_normalize.scss
+  - \_vendors.scss
   - \_vendor-variables-overrides.scss
 - main.scss
 
@@ -337,5 +337,4 @@ We want to create a more structured way on how to implement scss.
 
 6. update background-color to #131313 (using \_variables.scss and \_body.scss)
 7. adapt all heading elements + paragraph to the color "white"
-8. have some normalization css added into "\_normalize.scss"
-9. Verify that everything is working correctly by starting your application.
+8. Verify that everything is working correctly by starting your application.
