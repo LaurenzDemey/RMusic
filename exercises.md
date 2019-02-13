@@ -18,12 +18,6 @@ Create an angular application using the angular console, while exploring the opt
 
 ## 1B. Understand TSConfig.json
 
-### todo presentation material
-
-- link between polyfills (core-js) & tsconfig.json (lib)
-- strict rules typescript
-  - explain each? or some?
-
 ### What we want to do
 
 We want to make our TSConfig more strict and more "browser safe".
