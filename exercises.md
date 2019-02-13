@@ -264,12 +264,7 @@ We want to build components to visualize 1 album or 1 playlist or 1 artist or 1 
 
 ## 4B. Pipes
 
-### todo presentation material
-
-- memoization (out-of-the-box)
-- pure vs impure
-
-### What we want to
+### What we want to do
 
 We want to transform a number to a more readable number.
 
