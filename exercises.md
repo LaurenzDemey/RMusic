@@ -338,17 +338,51 @@ We want to create a beautiful layout for our application
 
 ### todo presentation material
 
-### What we want to
+- dumb/smart components
+- show result what we want?
+- content projection
+- screenshot for each component?
+
+### What we want to do
+
+We want to build components to visualize 1 album or 1 playlist or 1 artist or 1 song. Depending on which type it needs to know which one to draw.
 
 ### Steps
+
+1. Create a new module called "singleValueModule"
+2. Create new components (albumComponent, songComponent, playlistComponent, artistComponent, roundComponent, squareComponent) (don't forget to export!)
+3. Adapt the square component to contain 2 content projection slots (app-square-cover & app-square-detail)
+4. style the square component so that the detail is below the cover slot. Adapt styling to your preference.
+5. Use the square component in the albumComponent. The cover contains an image. The detail should contain album name + artist name (there are assets available for testing the image)
+6. Do the same for the playlist component, but it contains a: image, playlist name and total tracks
+7. Adapt the round component just like the square component, but with different styling (cover needs to be rounded)
+8. Adapt the artist component to use the round component (image, name and followers)
+9. Adapt the song component to use the round component (image, song name and artist name)
 
 ## 4B. Pipes
 
 ### todo presentation material
 
+- memoization (out-of-the-box)
+- pure vs impure
+
 ### What we want to
 
+We want to transform a number to a more readable number.
+
 ### Steps
+
+1. Create a pipe (readableNumberPipe) in singeValueModule
+2. Write logic so that it's more readable
+
+For example:
+
+- 0 - 999 => (same number)
+- 1 000-1 900 => 1 K
+- 1 000 000 - 1 999 999 => 1 M
+
+3. Use this pipe on your followers property in your artist component
+4. (extra) Try to round with 1 digital (for example: 1.2 K)
 
 ## 4C. Overlay
 
