@@ -219,15 +219,6 @@ We want to optimize code using lazy loading + add more structure
 
 ## 3A. SCSS 7-1 pattern
 
-### todo presentation material
-
-- explain scss vs SASS
-- short intro what's possible
-- 7-1 pattern
-- partial files
-- !default
-- importing partial files / node_modules
-
 ### What we want to do
 
 We want to create a more structured way on how to implement scss.
