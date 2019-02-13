@@ -1,0 +1,41 @@
+@import '../../../scss/variables/_index';
+
+$color-primary: $color-text-primary;
+$color-secondary: $color-text-secondary;
+$square-max-width: 190px;
+$square-gutter: 8px;
+
+// TODO
+.square-container {
+  max-width: $square-max-width;
+}
+
+.square-detail {
+  margin-top: $square-gutter;
+
+  ::ng-deep {
+    .primary-label {
+      color: $color-primary;
+      font-size: 16px;
+      font-weight: 350;
+      margin-top: 8px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .secondary-label {
+      color: $color-secondary;
+      font-size: 16px;
+      font-weight: 250;
+      line-height: 20px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.square-cover ::ng-deep img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
