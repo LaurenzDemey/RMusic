@@ -460,3 +460,11 @@ We want to add behavior to any element so that an overlay comes on top of it.
 ### What we want to
 
 ### Steps
+
+## 7C. Dialog
+
+### todo presentation material
+
+### What we want to
+
+### Steps
