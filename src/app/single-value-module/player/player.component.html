@@ -1,0 +1,117 @@
+<div class="player-container">
+  <div class="player-controls">
+    <button class="btn icon-btn"
+            [disabled]="noPrevious"
+            [ngClass]="{'btn-diabled': noPrevious}"
+            (click)="previous()">
+      <fa-icon [icon]="previousIcon"
+               size="lg"></fa-icon>
+    </button>
+    <button class="btn icon-btn"
+            *ngIf="!(isPlaying$ | async); else pauseBtn;"
+            (click)="play()">
+      <fa-icon [icon]="playIcon"
+               size="lg"></fa-icon>
+    </button>
+    <ng-template #pauseBtn>
+      <button class="btn icon-btn"
+              (click)="pause()">
+        <fa-icon [icon]="pauseIcon"
+                 size="lg"></fa-icon>
+      </button>
+    </ng-template>
+    <button class="btn icon-btn"
+            [disabled]="noNext"
+            [ngClass]="{'btn-diabled': noNext}"
+            (click)="next()">
+      <fa-icon [icon]="nextIcon"
+               size="lg"></fa-icon>
+    </button>
+  </div>
+  <div class="player-track">
+    <div class="track-container">
+      <ng-container *ngIf="(audioPlaying$ | async) as currentPlayingSong; else noSong">
+        <div class="track-header">
+          <div class="track-title">
+            {{currentPlayingSong.name}} • {{currentPlayingSong.artist}}
+          </div>
+          <div class="track-actions">
+            <button class="btn icon-btn">
+              <fa-icon [icon]="addToPlaylistIcon"
+                       size="1x"></fa-icon>
+            </button>
+            <button class="btn icon-btn">
+              <fa-icon [icon]="loveIcon"
+                       size="1x"></fa-icon>
+            </button>
+          </div>
+        </div>
+        <div class="track-play-info">
+          <div class="track-slider-counter slider-counter-current">{{minSongTime$ | async}}</div>
+          <div class="player-bar">
+            <div class="slider-track-default"></div>
+            <div [style.width.%]="(currentSongTime$ | async) * 100"
+                 class="slider-track-active"></div>
+            <input class="slider-track-input mousetrap"
+                   type="range"
+                   step="1"
+                   [min]="minTime"
+                   [max]="maxTime$ | async"
+                   [value]="currentSongTime$ | async">
+          </div>
+          <div class="track-slider-counter slider-counter-max">{{maxSongTime$ | async}}</div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="player-options">
+    <div class="player-options-actions">
+      <button class="btn icon-btn"
+              (click)="shuffle()">
+        <fa-icon [icon]="shuffleIcon"
+                 size="1x"></fa-icon>
+      </button>
+      <button class="btn icon-btn"
+              *ngIf="!isMuted">
+        <fa-icon [icon]="volumeOnIcon"
+                 size="1x"></fa-icon>
+      </button>
+      <button class="btn icon-btn"
+              *ngIf="isMuted">
+        <fa-icon [icon]="muteIcon"
+                 size="1x"></fa-icon>
+      </button>
+      <button class="btn icon-btn">
+        <fa-icon [icon]="audioSettingsIcon"
+                 size="1x"></fa-icon>
+      </button>
+    </div>
+    <ng-container *ngIf="(queueList$| async) as queueList">
+      <div class="divider"></div>
+      <div class="queue-list">
+        <button class="btn icon-btn queue-list-btn"
+                type="button">
+          <figure class="thumbnail">
+            <div class="picture overlay-hidden">
+              <img crossorigin="anonymous"
+                   class="picture-img active"
+                   alt=""
+                   src="https://e-cdns-images.dzcdn.net/images/cover/e0d841c77765ef15bfb88b91ec8cab46/28x28-000000-80-0-0.jpg">
+            </div>
+          </figure>
+          <div class="queuelist-label">
+            Queue
+          </div>
+        </button>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #noSong>
+  <div class="track-header">
+    <div class="track-title">
+      No song selected
+    </div>
+  </div>
+</ng-template>

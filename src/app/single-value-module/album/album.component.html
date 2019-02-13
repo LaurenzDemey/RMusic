@@ -1,7 +1,8 @@
 <app-square>
   <ng-container app-square-cover>
     <app-overlay [tmpl]="hoverTmpl">
-      <img [src]="img" alt="album-cover-image" />
+      <img [src]="img"
+           alt="album-cover-image" />
     </app-overlay>
   </ng-container>
   <ng-container app-square-detail>
@@ -15,5 +16,8 @@
 </app-square>
 
 <ng-template #hoverTmpl>
-  <fa-icon class="clickable" [icon]="playSongIcon" size="lg" (click)="play()"></fa-icon>
+  <fa-icon class="clickable"
+           [icon]="playSongIcon"
+           size="lg"
+           (click)="play()"></fa-icon>
 </ng-template>

@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { MusicService } from '../player/service';
 
 @Component({
   selector: 'app-song',
@@ -17,9 +18,24 @@ export class SongComponent {
   @Input()
   artist: number;
 
+  @Input()
+  id: number;
+
+  @Input()
+  type: string;
+
   playSongIcon = faPlay;
 
+  constructor(private musicService: MusicService) {}
+
   play() {
-    // do something
+    if (this.id && this.type) {
+      const playerInfo = {
+        id: this.id,
+        type: this.type
+      };
+
+      this.musicService.selectedTracklist(playerInfo);
+    }
   }
 }
