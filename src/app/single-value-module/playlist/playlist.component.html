@@ -1,0 +1,13 @@
+<app-square>
+  <ng-container app-square-cover>
+    <img [src]="img" alt="album-cover-image" />
+  </ng-container>
+  <ng-container app-square-detail>
+    <div class="primary-label">
+      <span>{{name}}</span>
+    </div>
+    <div class="secondary-label">
+      <span>Playlist • {{totalTracks}} songs</span>
+    </div>
+  </ng-container>
+</app-square>
