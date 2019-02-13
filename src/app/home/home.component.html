@@ -2,18 +2,26 @@
   <app-album *ngIf="chart.type === 'album'"
              [artist]="chart.artist"
              [img]="chart.img"
+             [type]="chart.type"
+             [tracklist]="chart.tracklist"
              [name]="chart.title"></app-album>
   <app-playlist *ngIf="chart.type === 'playlist'"
                 [img]="chart.img"
                 [name]="chart.title"
+                [type]="chart.type"
+                [tracklist]="chart.tracklist"
                 [totalTracks]="chart.totalTracks"></app-playlist>
   <app-artist *ngIf="chart.type === 'artist'"
               [img]="chart.img"
               [name]="chart.title"
+              [type]="chart.type"
+              [tracklist]="chart.tracklist"
               [followers]="chart.followers"></app-artist>
   <app-song *ngIf="chart.type === 'song'"
             [img]="chart.img"
             [name]="chart.title"
+            [type]="chart.type"
+            [id]="chart.id"
             [artist]="chart.artist"></app-song>
 
 </ng-container>
