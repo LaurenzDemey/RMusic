@@ -143,7 +143,6 @@ export class PlayerComponent implements OnInit {
           if (tracks[currentIndx].preview) {
             this.musicService.play(tracks[currentIndx]);
             playingTrack = tracks[currentIndx];
-            debugger;
           } else {
             this.noMp3AudioHandler(currentState.state);
           }
