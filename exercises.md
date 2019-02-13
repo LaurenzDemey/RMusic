@@ -1510,7 +1510,7 @@ Correct! We need to bind all the streams together.
 
 DOES IT WORK?
 
-- try to play a song!
+- try to play a song
 - click on the next button
 - click on the previous button
 - pause a song
