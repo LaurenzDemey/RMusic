@@ -413,8 +413,6 @@ We want to add behavior to any element so that an overlay comes on top of it.
 
 ### todo presentation material
 
-- dependency injection
-  - injection token
 - service module
 - httpclientmodule
 - rxjs observables
@@ -1190,7 +1188,7 @@ We want to use a fake api server to load our data as it would be provided by a r
 
 4. add npm script which starts the json server for db.json. Give it "fake-api" as script name and execute this script.
 5. verify that the api is up.
-6. create a api folder inside app folder with an inteface folder, a model folder and an injection-token.file
+6. create a api folder inside app folder with an inteface folder, a model folder
 
 7. create a fake-api service module and add a chart service and album service file (don't forget the barrel files)
 8. create an app.config.ts file at app folder level. This file will have the base url to the json server. Paste the following:
@@ -1201,10 +1199,9 @@ export const appConfig = {
 };
 ```
 
-9. implement the services to get a list of charts and an album from the json server.
+9. implement the services to get a list of charts and albums from the json server.
 
 - use the base url inside your request
-- use the injection tokens to provide the services.
 - make sure to use Rxjs
 - map the result to return an object of type IChart and IAlbum which has the following properties:
   ```typescript
@@ -1226,7 +1223,7 @@ export const appConfig = {
   ```
 
 10. show a list of charts in home. Make use of the single value components you created in the previous steps
-11. show an album with id 302127 in the hotlist page. Use a proper single value component to visualise the data.
+11. show a list of albums in the hotlist page. Use a proper single value component to visualise the data.
 
 ## 5B. Deezer
 

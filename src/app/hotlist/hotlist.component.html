@@ -1,4 +1,4 @@
-<ng-container *ngIf="(album$ | async) as album">
+<ng-container *ngFor="let album of album$ | async">
   <app-album [artist]="album.artist"
              [img]="album.img"
              [name]="album.name"></app-album>

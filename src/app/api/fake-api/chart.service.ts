@@ -6,7 +6,9 @@ import { appConfig } from '../../app.config';
 import { IChartService } from '../interface';
 import { IChart } from '../model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ChartService implements IChartService {
   constructor(private http: HttpClient) {}
 
