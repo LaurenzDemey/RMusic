@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-album',
@@ -15,4 +16,10 @@ export class AlbumComponent {
 
   @Input()
   artist: string;
+
+  playSongIcon = faPlay;
+
+  play() {
+    // do something
+  }
 }
