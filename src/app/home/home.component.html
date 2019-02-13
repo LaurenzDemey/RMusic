@@ -1,4 +1,19 @@
-<app-album [artist]="'an album'" [img]="'/assets/playlist/1.jpg'" [name]="'album name'"></app-album>
-<app-playlist [name]="'my playlist'" [img]="'/assets/playlist/1.jpg'" [totalTracks]="25"></app-playlist>
-<app-artist [name]="'an artist'" [img]="'/assets/artists/1.jpg'" [followers]="24500"></app-artist>
-<app-song [name]="'an song title'" [img]="'/assets/songs/12.jpg'" [artist]="'an artist'"></app-song>
+<ng-container *ngFor="let chart of charts$ | async">
+  <app-album *ngIf="chart.type === 'album'"
+             [artist]="chart.artist"
+             [img]="chart.img"
+             [name]="chart.name"></app-album>
+  <app-playlist *ngIf="chart.type === 'playlist'"
+                [img]="chart.img"
+                [name]="chart.name"
+                [totalTracks]="chart.totalTracks"></app-playlist>
+  <app-artist *ngIf="chart.type === 'artist'"
+              [img]="chart.img"
+              [name]="chart.name"
+              [followers]="chart.followers"></app-artist>
+  <app-song *ngIf="chart.type === 'song'"
+            [img]="chart.img"
+            [name]="chart.name"
+            [artist]="chart.artist"></app-song>
+
+</ng-container>
