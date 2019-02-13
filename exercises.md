@@ -92,14 +92,6 @@ Add linting tools so that it's easy to use. We are also going to activate the au
 
 ## 1E. formatting
 
-### todo presentation material
-
-- prettier
-- prettier configuration
-- AST tree - how prettier works
-- optimizations
-- "Let Prettier take care of code formatting, and TSLint of the rest"
-
 ### What we want to do
 
 Align formatting for the whole team by using prettier. To make this work perfectly we need to update linting as well.
