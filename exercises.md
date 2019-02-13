@@ -449,6 +449,22 @@ We want to add behavior to any element so that an overlay comes on top of it.
 
 ### todo presentation material
 
+- contentChild vs viewChild
+- ng-template & ngTemplateOutlet &TemplateRef
+- passing an input to a directive
+
 ### What we want to
 
+We want to build a tabs component
+
 ### Steps
+
+1. create a module called "tabsModule"
+2. create a component called "tabsComponent"
+3. create a directive called "tabDirective"
+4. update your directive to support passing in a label
+5. Update your directive to retrieve the (@viewChild) host template on which this directive was used
+6. Update your component to get a list of all (@ContentChildren) children with the attribute/directive "appTab'. Put it in a property called "tabs".
+7. Update your component: after the content has initialized, take the first tab of the "tabs" and put it in a property called "activeTab"
+8. Update the html of your component to render like tabs. The active tab label should be highlighted and the content of the active tab should be visualized using ngTemplateOutlet.
+9. You can test your tabs component inside the library page.

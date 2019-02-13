@@ -1,0 +1,14 @@
+<div class="tab-headers">
+  <div class="tab-labels">
+    <div *ngFor="let tab of tabs" class="tab-label" [ngClass]="{active: tab.label===activeTab?.label}"
+         (click)="setActiveTab(tab)">
+      {{tab.label}}
+    </div>
+  </div>
+</div>
+
+<div class="tab-content-container">
+  <div *ngIf="activeTab" class="tab-content">
+    <ng-container *ngTemplateOutlet="activeTab.content"></ng-container>
+  </div>
+</div>
