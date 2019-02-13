@@ -284,7 +284,7 @@ For example:
 
 ## 4C. Overlay
 
-### What we want to
+### What we want to do
 
 We want to add behavior to any element so that an overlay comes on top of it.
 
@@ -303,14 +303,7 @@ We want to add behavior to any element so that an overlay comes on top of it.
 
 ## 5A. Fake API
 
-### todo presentation material
-
-- service module
-- httpclientmodule
-- rxjs observables
-- rxjs map operator
-
-### What we want to
+### What we want to do
 
 We want to use a fake api server to load our data as it would be provided by a real backend.
 
@@ -1080,8 +1073,7 @@ We want to use a fake api server to load our data as it would be provided by a r
 
 4. add npm script which starts the json server for db.json. Give it "fake-api" as script name and execute this script.
 5. verify that the api is up.
-6. create a api folder inside app folder with an inteface folder, a model folder
-
+6. create an api folder inside app folder. It should contain an interface folder, a model folder
 7. create a fake-api service module and add a chart service and album service file (don't forget the barrel files)
 8. create an app.config.ts file at app folder level. This file will have the base url to the json server. Paste the following:
 
@@ -1118,11 +1110,6 @@ export const appConfig = {
 11. show a list of albums in the hotlist page. Use a proper single value component to visualise the data.
 
 ## 5B. Deezer
-
-### todo presentation material
-
-- dependency injection
-  - injection token
 
 ### What we want to
 
@@ -1412,7 +1399,7 @@ export interface IChart {
 
 Make sure to use Rxjs operators to become the expected return results
 
-9. Modify tthe service form the fake-api folder with the changes you've made in the deezer implementation
+9. Modify the service from the fake-api folder with the changes you've made in the deezer implementation
 10. add injection token file in api folder and register injection tokens for the different services.
 
 - change deezer module to provide those injection tokens
@@ -1430,6 +1417,8 @@ Make sure to use Rxjs operators to become the expected return results
 ### todo presentation material
 
 ### What we want to
+
+We want to create a music player, which handles play, pause, next and previous
 
 ### Steps
 
