@@ -284,7 +284,7 @@ For example:
 
 ## 4C. Overlay
 
-### What we want to
+### What we want to do
 
 We want to add behavior to any element so that an overlay comes on top of it.
 
