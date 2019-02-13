@@ -33,23 +33,6 @@ We want to make our TSConfig more strict and more "browser safe".
 
 ## 1C. linting
 
-### todo presentation material
-
-- extend linting rules
-- external linting rules
-
-  - codelyzer
-  - rxjs linter
-  - ...
-
-- linters
-
-  - scss linter
-  - html linter
-
-- list all the "default" rules by tslint + codelyzer
-- where to configure linting rules (named file, custom named file, package.json, ...)
-
 ### What we want to do
 
 We want to improve quality by having code quality checks using linters.
