@@ -1,6 +1,9 @@
 <app-round>
   <ng-container app-round-cover>
-    <img [src]="img" alt="artist-image" />
+    <app-overlay [tmpl]="hoverTmpl">
+      <img [src]="img" alt="artist-image" />
+    </app-overlay>
+
   </ng-container>
   <ng-container app-round-detail>
     <div class="primary-label">
@@ -11,3 +14,7 @@
     </div>
   </ng-container>
 </app-round>
+
+<ng-template #hoverTmpl>
+  <fa-icon class="clickable" [icon]="playSongIcon" size="lg" (click)="play()"></fa-icon>
+</ng-template>
