@@ -202,12 +202,6 @@ We want to create a base structure for each page with a menu on top
 
 ## 2B. lazy load
 
-### todo presentation material
-
-- how to lazy load module
-- not lazy load initial route
-- different ways to create modules
-
 ### What we want to do
 
 We want to optimize code using lazy loading + add more structure
