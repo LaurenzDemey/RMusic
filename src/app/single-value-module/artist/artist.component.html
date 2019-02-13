@@ -1,0 +1,13 @@
+<app-round>
+  <ng-container app-round-cover>
+    <img [src]="img" alt="artist-image" />
+  </ng-container>
+  <ng-container app-round-detail>
+    <div class="primary-label">
+      <span>{{name}}</span>
+    </div>
+    <div class="secondary-label">
+      <span>{{followers | readableNumber}} followers</span>
+    </div>
+  </ng-container>
+</app-round>
