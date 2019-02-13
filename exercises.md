@@ -1111,11 +1111,6 @@ export const appConfig = {
 
 ## 5B. Deezer
 
-### todo presentation material
-
-- dependency injection
-  - injection token
-
 ### What we want to
 
 We want to switch easily between different api's buy changeing the export statement in a barrelfile using injections token and service interfaces
@@ -1404,7 +1399,7 @@ export interface IChart {
 
 Make sure to use Rxjs operators to become the expected return results
 
-9. Modify tthe service form the fake-api folder with the changes you've made in the deezer implementation
+9. Modify the service from the fake-api folder with the changes you've made in the deezer implementation
 10. add injection token file in api folder and register injection tokens for the different services.
 
 - change deezer module to provide those injection tokens
