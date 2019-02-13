@@ -7,18 +7,11 @@ import { RoundComponent } from './round/round.component';
 import { SongComponent } from './song/song.component';
 import { SquareComponent } from './square/square.component';
 
-const components = [
-  AlbumComponent,
-  SongComponent,
-  PlaylistComponent,
-  ArtistComponent,
-  RoundComponent,
-  SquareComponent
-];
+const exportedComponents = [AlbumComponent, SongComponent, PlaylistComponent, ArtistComponent];
 
 @NgModule({
-  declarations: [...components],
+  declarations: [...exportedComponents, RoundComponent, SquareComponent],
   imports: [CommonModule],
-  exports: [...components]
+  exports: [...exportedComponents]
 })
 export class SingleValueModule {}
