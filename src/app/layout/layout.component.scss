@@ -10,7 +10,6 @@
 .topbar-background {
   background-color: #232323;
   opacity: 0;
-  transition: opacity 0.2s;
   will-change: opacity;
 
   &.scrolled {
