@@ -1432,11 +1432,3 @@ Make sure to use Rxjs operators to become the expected return results
 ### What we want to
 
 ### Steps
-
-## 6B. Playlist
-
-### todo presentation material
-
-### What we want to
-
-### Steps
