@@ -284,12 +284,6 @@ For example:
 
 ## 4C. Overlay
 
-### todo presentation material
-
-- host binding
-- host listener
-- fromEvent
-
 ### What we want to
 
 We want to add behavior to any element so that an overlay comes on top of it.
@@ -302,5 +296,5 @@ We want to add behavior to any element so that an overlay comes on top of it.
 4. Only render the template using a boolean variable
 5. Listen for mouseenter and mouseleave events using @HostListener and update the boolean variable
 6. Apply your overlay component inside your albumComponent (only around the image). Pass in a template with a play icon
-7. (extra)If everything works, you can apply it to all the other components as well (song, playlist, artist)
-8. Replace your @hostlisteners and use fromEvent (rxjs) for a more reactive approach
+7. (extra) If everything works, you can apply it to all the other components as well (song, playlist, artist)
+8. (extra) Replace your @hostlisteners and use fromEvent (rxjs) for a more reactive approach
