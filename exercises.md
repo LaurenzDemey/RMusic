@@ -2,21 +2,6 @@
 
 ## 1A. Create an angular application
 
-### todo presentation material
-
-- workspace
-- schematics
-  - angular schematics
-  - nrwl
-- settings
-  - ivy rendering
-  - multiple projects
-  - routing
-  - prefix, why it's needed
-  - styling (later)
-  - skip tests
-  - explain why some options are available, while other not (manipulating E2E to cypress for example)
-
 ### What we want to do
 
 Create an angular application using the angular console, while exploring the options.
@@ -33,12 +18,6 @@ Create an angular application using the angular console, while exploring the opt
 
 ## 1B. Understand TSConfig.json
 
-### todo presentation material
-
-- link between polyfills (core-js) & tsconfig.json (lib)
-- strict rules typescript
-  - explain each? or some?
-
 ### What we want to do
 
 We want to make our TSConfig more strict and more "browser safe".
@@ -53,23 +32,6 @@ We want to make our TSConfig more strict and more "browser safe".
 2. only import lib "es2015" and "dom"
 
 ## 1C. linting
-
-### todo presentation material
-
-- extend linting rules
-- external linting rules
-
-  - codelyzer
-  - rxjs linter
-  - ...
-
-- linters
-
-  - scss linter
-  - html linter
-
-- list all the "default" rules by tslint + codelyzer
-- where to configure linting rules (named file, custom named file, package.json, ...)
 
 ### What we want to do
 
@@ -116,17 +78,6 @@ We want to improve quality by having code quality checks using linters.
 
 ## 1D. npm scripts
 
-### todo presentation material
-
-- why "ng": "ng" => .bin local executable
-- life cycle hooks
-- keyword scripts (prepublishOnly, preinstall, ...)
-- grouping?
-- lint fixers + integrate into IDE
-- difference between calling tslint directly VS ng lint
-- npm spawn process using && (serial and stop if 1 fails) VS ; (serial but executes even if first fails) vS & (parallel, but doesn't work on windows)
-- npm-run-all
-
 ### What we want to do
 
 Add linting tools so that it's easy to use. We are also going to activate the automatic fixers.
@@ -137,17 +88,9 @@ Add linting tools so that it's easy to use. We are also going to activate the au
 2. add npm script for linting HTML
 3. add npm script for linting SCSS
 4. add npm script to execute all linting
-5. add npm script to fix all lint issues automatic using fixers
+5. add npm script to fix all lint issues automatic using --fix
 
 ## 1E. formatting
-
-### todo presentation material
-
-- prettier
-- prettier configuration
-- AST tree - how prettier works
-- optimizations
-- "Let Prettier take care of code formatting, and TSLint of the rest"
 
 ### What we want to do
 
@@ -164,14 +107,6 @@ Align formatting for the whole team by using prettier. To make this work perfect
 # 2. Structure
 
 ## 2A. pages
-
-### todo presentation material
-
-- todo: provide assets???
-- generate 4 pages
-- generate layout component?
-- routerLink / routerLinkActive / routerOutlet
-- rgrev -tsconfig.json
 
 ### What we want to do
 
@@ -224,18 +159,12 @@ We want to create a base structure for each page with a menu on top
 5. update app component to render 1 page + add menu-items for each route (don't mind styling for now)
 6. Test you application, if everything works as expected.
 7. install ngRev (https://github.com/mgechev/ngrev)
-8. add npm script for building your application to production (ng build --prod)
-9. install "webpack-bundle-analyzer" as dev-dependency
-10. add npm script for inspecting bundle size ("ng build --prod --stats-json && webpack-bundle-analyzer dist/RMusic/stats.json")
-11. look what happens with the bundle when you don't build for prod (check main.js/src/app)
+8. (extra) add npm script for building your application to production (ng build --prod)
+9. (extra) install "webpack-bundle-analyzer" as dev-dependency
+10. (extra) add npm script for inspecting bundle size ("ng build --prod --stats-json && webpack-bundle-analyzer dist/RMusic/stats.json")
+11. (extra) look what happens with the bundle when you don't build for prod (check main.js/src/app)
 
 ## 2B. lazy load
-
-### todo presentation material
-
-- how to lazy load module
-- not lazy load initial route
-- different ways to create modules
 
 ### What we want to do
 
@@ -253,15 +182,6 @@ We want to optimize code using lazy loading + add more structure
 # 3. Styling
 
 ## 3A. SCSS 7-1 pattern
-
-### todo presentation material
-
-- explain scss vs SASS
-- short intro what's possible
-- 7-1 pattern
-- partial files
-- !default
-- importing partial files / node_modules
 
 ### What we want to do
 
@@ -288,7 +208,7 @@ We want to create a more structured way on how to implement scss.
 - vendor
   - \_\_index.scss
   - \_vendor-overrides.scss
-  - \_normalize.scss
+  - \_vendors.scss
   - \_vendor-variables-overrides.scss
 - main.scss
 
@@ -301,19 +221,9 @@ We want to create a more structured way on how to implement scss.
 
 6. update background-color to #131313 (using \_variables.scss and \_body.scss)
 7. adapt all heading elements + paragraph to the color "white"
-8. have some normalization css added into "\_normalize.scss"
-9. Verify that everything is working correctly by starting your application.
+8. Verify that everything is working correctly by starting your application.
 
 ## 3B. Layout
-
-### todo presentation material
-
-- expose images? already done, no?
-- shared component
-- why i create new module instead of appComponent
-- smart / dumb components
-- routing component VS template component (entry component)
-- font icon
 
 ### What we want to do
 
@@ -336,13 +246,6 @@ We want to create a beautiful layout for our application
 
 ## 4A. Album / playlist / artist / song
 
-### todo presentation material
-
-- dumb/smart components
-- show result what we want?
-- content projection
-- screenshot for each component?
-
 ### What we want to do
 
 We want to build components to visualize 1 album or 1 playlist or 1 artist or 1 song. Depending on which type it needs to know which one to draw.
@@ -361,12 +264,7 @@ We want to build components to visualize 1 album or 1 playlist or 1 artist or 1 
 
 ## 4B. Pipes
 
-### todo presentation material
-
-- memoization (out-of-the-box)
-- pure vs impure
-
-### What we want to
+### What we want to do
 
 We want to transform a number to a more readable number.
 
