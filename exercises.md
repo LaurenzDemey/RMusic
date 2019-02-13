@@ -225,14 +225,6 @@ We want to create a more structured way on how to implement scss.
 
 ## 3B. Layout
 
-### todo presentation material
-
-- shared component
-- why i create new module instead of appComponent
-- smart / dumb components
-- routing component VS template component (entry component)
-- font icon
-
 ### What we want to do
 
 We want to create a beautiful layout for our application
