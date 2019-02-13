@@ -363,6 +363,23 @@ We want to build components to visualize 1 album or 1 playlist or 1 artist or 1 
 
 ### todo presentation material
 
+- memoization (out-of-the-box)
+- pure vs impure
+
 ### What we want to
 
+We want to transform a number to a more readable number.
+
 ### Steps
+
+1. Create a pipe (readableNumberPipe) in singeValueModule
+2. Write logic so that it's more readable
+
+For example:
+
+- 0 - 999 => (same number)
+- 1 000-1 900 => 1 K
+- 1 000 000 - 1 999 999 => 1 M
+
+3. Use this pipe on your followers property in your artist component
+4. (extra) Try to round with 1 digital (for example: 1.2 K)
