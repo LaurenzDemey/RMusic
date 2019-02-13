@@ -2,21 +2,6 @@
 
 ## 1A. Create an angular application
 
-### todo presentation material
-
-- workspace
-- schematics
-  - angular schematics
-  - nrwl
-- settings
-  - ivy rendering
-  - multiple projects
-  - routing
-  - prefix, why it's needed
-  - styling (later)
-  - skip tests
-  - explain why some options are available, while other not (manipulating E2E to cypress for example)
-
 ### What we want to do
 
 Create an angular application using the angular console, while exploring the options.
@@ -33,12 +18,6 @@ Create an angular application using the angular console, while exploring the opt
 
 ## 1B. Understand TSConfig.json
 
-### todo presentation material
-
-- link between polyfills (core-js) & tsconfig.json (lib)
-- strict rules typescript
-  - explain each? or some?
-
 ### What we want to do
 
 We want to make our TSConfig more strict and more "browser safe".
@@ -53,23 +32,6 @@ We want to make our TSConfig more strict and more "browser safe".
 2. only import lib "es2015" and "dom"
 
 ## 1C. linting
-
-### todo presentation material
-
-- extend linting rules
-- external linting rules
-
-  - codelyzer
-  - rxjs linter
-  - ...
-
-- linters
-
-  - scss linter
-  - html linter
-
-- list all the "default" rules by tslint + codelyzer
-- where to configure linting rules (named file, custom named file, package.json, ...)
 
 ### What we want to do
 
