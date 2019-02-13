@@ -1,6 +1,7 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ALBUM_SERVICE, IAlbum, IAlbumService } from '../api';
+import { IAlbum } from '../api';
+import { AlbumService } from '../api/fake-api/album.service';
 
 @Component({
   selector: 'app-hotlist',
@@ -8,11 +9,11 @@ import { ALBUM_SERVICE, IAlbum, IAlbumService } from '../api';
   styleUrls: ['./hotlist.component.scss']
 })
 export class HotlistComponent implements OnInit {
-  album$: Observable<IAlbum>;
+  album$: Observable<IAlbum[]>;
 
-  constructor(@Inject(ALBUM_SERVICE) private albumServic: IAlbumService) {}
+  constructor(private albumServic: AlbumService) {}
 
   ngOnInit() {
-    this.album$ = this.albumServic.getAlbumById(302127);
+    this.album$ = this.albumServic.getAlbums();
   }
 }
