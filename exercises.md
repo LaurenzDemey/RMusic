@@ -1426,13 +1426,7 @@ We want to create a music player, which handles play, pause, next and previous
 
 ## 7A. Tabs
 
-### todo presentation material
-
-- contentChild vs viewChild
-- ng-template & ngTemplateOutlet &TemplateRef
-- passing an input to a directive
-
-### What we want to
+### What we want to do
 
 We want to build a tabs component
 
