@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,7 @@ import { LayoutModule } from './layout';
   imports: [
     // application wide module
     BrowserModule,
+    HttpClientModule,
 
     // routing
     AppRoutingModule,

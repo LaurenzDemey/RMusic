@@ -6,10 +6,8 @@
 // Import vendor variables overrides
 @import 'vendor-variables-overrides';
 
-// Import normalization css before other vendor code
-//@import 'normalize';
-
 // Import external specific vendor styles
+@import 'vendors';
 
 // Import vendor overrides
 @import 'vendor-overrides';
