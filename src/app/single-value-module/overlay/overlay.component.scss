@@ -1,0 +1,14 @@
+$background-overlay-panel: rgba(0, 0, 0, 0.4);
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: $background-overlay-panel;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}

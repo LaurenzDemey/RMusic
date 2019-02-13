@@ -40,6 +40,7 @@ $round-gutter: 8px;
   overflow: hidden;
   width: $round-width;
   height: $round-width;
+  position: relative;
 
   &::ng-deep img {
     height: 100%;
