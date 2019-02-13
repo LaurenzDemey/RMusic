@@ -108,14 +108,6 @@ Align formatting for the whole team by using prettier. To make this work perfect
 
 ## 2A. pages
 
-### todo presentation material
-
-- todo: provide assets???
-- generate 4 pages
-- generate layout component?
-- routerLink / routerLinkActive / routerOutlet
-- rgrev -tsconfig.json
-
 ### What we want to do
 
 We want to create a base structure for each page with a menu on top
@@ -203,7 +195,7 @@ We want to create a base structure for each page with a menu on top
 5. update app component to render 1 page + add menu-items for each route (don't mind styling for now)
 6. Test you application, if everything works as expected.
 7. install ngRev (https://github.com/mgechev/ngrev)
-8. add npm script for building your application to production (ng build --prod)
-9. install "webpack-bundle-analyzer" as dev-dependency
-10. add npm script for inspecting bundle size ("ng build --prod --stats-json && webpack-bundle-analyzer dist/RMusic/stats.json")
-11. look what happens with the bundle when you don't build for prod (check main.js/src/app)
+8. (extra) add npm script for building your application to production (ng build --prod)
+9. (extra) install "webpack-bundle-analyzer" as dev-dependency
+10. (extra) add npm script for inspecting bundle size ("ng build --prod --stats-json && webpack-bundle-analyzer dist/RMusic/stats.json")
+11. (extra) look what happens with the bundle when you don't build for prod (check main.js/src/app)
