@@ -246,13 +246,6 @@ We want to create a beautiful layout for our application
 
 ## 4A. Album / playlist / artist / song
 
-### todo presentation material
-
-- dumb/smart components
-- show result what we want?
-- content projection
-- screenshot for each component?
-
 ### What we want to do
 
 We want to build components to visualize 1 album or 1 playlist or 1 artist or 1 song. Depending on which type it needs to know which one to draw.
