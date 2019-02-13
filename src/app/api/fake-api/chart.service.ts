@@ -19,6 +19,7 @@ export class ChartService implements IChartService {
 
         res.albums.data.forEach(album => {
           result.push({
+            id: album.id,
             type: 'album',
             img: album.cover_medium,
             artist: album.artist.name,
@@ -27,6 +28,7 @@ export class ChartService implements IChartService {
         });
         res.artists.data.forEach(artist => {
           result.push({
+            id: artist.id,
             type: 'artist',
             img: artist.picture_medium,
             followers: artist.followers,
@@ -35,6 +37,7 @@ export class ChartService implements IChartService {
         });
         res.playlists.data.forEach(playlist => {
           result.push({
+            id: playlist.id,
             type: 'playlist',
             img: playlist.picture_medium,
             totalTracks: playlist.nb_tracks,
@@ -43,6 +46,7 @@ export class ChartService implements IChartService {
         });
         res.tracks.data.forEach(track => {
           result.push({
+            id: track.id,
             type: 'song',
             img: track.album.cover_medium,
             name: track.title

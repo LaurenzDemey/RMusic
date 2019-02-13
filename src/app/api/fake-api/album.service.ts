@@ -25,4 +25,8 @@ export class AlbumService implements IAlbumService {
       })
     );
   }
+
+  getAlbumTracks(url: string): Observable<import('../model').ITrack[]> {
+    throw new Error('Method not implemented.');
+  }
 }
