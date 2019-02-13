@@ -1121,6 +1121,304 @@ export const appConfig = {
 
 ### todo presentation material
 
+- dependency injection
+  - injection token
+
 ### What we want to
 
+We want to switch easily between different api's buy changeing the export statement in a barrelfile using injections token and service interfaces
+
 ### Steps
+
+1. install @angular/http and save to dependencies
+2. add a new folder inside api called "deezer"
+3. create a model folder with following typescript files (don't forget barrel file):
+
+- album.dto
+
+```typescript
+export interface IAlbumDto {
+  id: number;
+  title: string;
+  cover: string;
+  cover_small: string;
+  cover_medium: string;
+  cover_big: string;
+  cover_xl: string;
+  record_type: string;
+  tracklist: string;
+  explicit_lyrics: boolean;
+  position: number;
+  artist: IArtistDto;
+  type: string;
+}
+```
+
+- albums.dto
+
+```typescript
+export interface IAlbumsDto {
+  data: IAlbumDto[];
+  total: number;
+}
+```
+
+- artist.dto
+
+```typescript
+export interface IArtistDto {
+  id: number;
+  name: string;
+  link: string;
+  picture: string;
+  picture_small: string;
+  picture_medium: string;
+  picture_big: string;
+  picture_xl: string;
+  radio: boolean;
+  tracklist: string;
+  position?: number;
+  nb_album: number;
+  nb_fan: number;
+}
+```
+
+- artists.dto
+
+```typescript
+export interface IArtistsDto {
+  data: IArtistDto[];
+  total: number;
+}
+```
+
+- chart.dto
+
+```typescript
+export interface IChartDto {
+  tracks: ITracksDto;
+  albums: IAlbumsDto;
+  artists: IArtistsDto;
+  playlists: IPlaylistsDto;
+}
+```
+
+- creator.dto
+
+```typescript
+export interface ICreatorDto {
+  id: string;
+  name: string;
+  tracklist: string;
+  type: string;
+  link?: string;
+}
+```
+
+- playlist.dto
+
+```typescript
+export interface IPlaylistDto {
+  id: number;
+  title: string;
+  public: boolean;
+  nb_tracks: number;
+  link: string;
+  picture: string;
+  picture_small: string;
+  picture_medium: string;
+  picture_big: string;
+  picture_xl: string;
+  checksum: string;
+  tracklist: string;
+  creation_date: string;
+  user: IUserDto;
+  type: string;
+  description: string;
+  duration: number;
+  is_loved_track: boolean;
+  collaborative: boolean;
+  fans: number;
+  share: string;
+  creator: ICreatorDto;
+  tracks: ITracksDto;
+}
+```
+
+- playlists.dto
+
+```typescript
+export interface IPlaylistsDto {
+  data: IPlaylistDto[];
+  total: number;
+}
+```
+
+- track.dto
+
+```typescript
+export interface ITrackDto {
+  id: number;
+  title: string;
+  title_short: string;
+  title_version: string;
+  link: string;
+  duration: number;
+  rank: number;
+  explicit_lyrics: boolean;
+  explicit_content_lyrics: number;
+  explicit_content_cover: number;
+  preview: string;
+  position: number;
+  artist: IArtistDto;
+  album: IAlbumDto;
+  type: string;
+}
+```
+
+- tracks.dto
+
+```typescript
+export interface ITracksDto {
+  data: ITrackDto[];
+  total: number;
+}
+```
+
+- user.dto
+
+```typescript
+export interface IUserDto {
+  id: number;
+  name: string;
+  tracklist: string;
+  type: string;
+}
+```
+
+4. add the folowing files to the model folder from the previous step:
+
+- artist.interface
+
+```typescript
+export interface IArtist {
+  id: number;
+  name: string;
+  link: string;
+  picture: string;
+  picture_medium: string;
+  radio: boolean;
+  tracklist: string;
+  nb_album: number;
+  nb_fan: number;
+}
+```
+
+- playlist.interface
+
+```typescript
+export interface IPlaylist {
+  title: string;
+  nb_tracks: number;
+  link?: string;
+  img: string;
+  tracklist?: string;
+  creation_date?: string;
+  type?: string;
+  description?: string;
+  duration?: number;
+  is_loved_track?: boolean;
+  fans: number;
+  share?: string;
+  tracks: ITrack[];
+}
+```
+
+- track.interface
+
+```typescript
+export interface ITrack {
+  id: number;
+  name: string;
+  link?: string;
+  duration: number;
+  preview: string;
+  position?: number;
+  artist: string;
+  img?: string;
+  type: string;
+}
+```
+
+- tracks.interface
+
+```typescript
+export interface ITracks {
+  data: ITrack[];
+  total: number;
+}
+```
+
+5. modify the IAlbum and the IChart interface width:
+
+```typescript
+export interface IAlbum {
+  id?: number;
+  name: string;
+  img: string;
+  record_type?: string;
+  tracklist?: string;
+  position?: number;
+  artist: IArtist;
+  type?: string;
+}
+
+export interface IChart {
+  id: number;
+  name?: string;
+  img: string;
+  totalTracks?: number;
+  followers?: number;
+  artist?: string;
+  type: string;
+  title?: string;
+  tracklist?: string;
+  totalFollowers?: number;
+}
+```
+
+6. add following files to the interface folder from the previous step:
+
+- artist.interface
+  - add method "getArtist" which accepts an id and returns an observable of type IArtist
+  - add method "getArtistTracks" which accepts a url and returns an observable of type ITrack[]
+- playlist.interface
+  - add method "getPlaylist" which accepts an id and returns an observable of type IPlaylist
+  - add method "getPlaylistTracks" which accepts a url and returns an observable of type ITrack[]
+- track.interface
+  - add method "getTrack" which accepts an id and returns an observable of type ITrack
+
+7. modify album.interface of the interface folder:
+
+- add method "getAlbumTracks" which accepts a url and returns an observable of type ITrack[]
+
+8. create a service module called "deezer" with the following services. For each service implement the corresponding interface from the interface folder:
+
+- album.service
+- artist.service
+- chart.service
+- playlist.service
+- track.service
+
+Make sure to use Rxjs operators to become the expected return results
+
+9. Modify tthe service form the fake-api folder with the changes you've made in the deezer implementation
+10. add injection token file in api folder and register injection tokens for the different services.
+
+- change deezer module to provide those injection tokens
+- change fake-api to also provide the tokens
+
+11. modify the home component and the hotlist component so that the injection tokens injected with there proper interface are injected instead of the class type.
+12. inject the playlist service and get playlist with id 1266968331 and show the playlist on the hotlist page.
+13. change the fake-api for the deezer
+14. make sure averything works again.
