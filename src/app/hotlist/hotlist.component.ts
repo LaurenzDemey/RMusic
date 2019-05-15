@@ -11,9 +11,9 @@ import { AlbumService } from '../api/fake-api/album.service';
 export class HotlistComponent implements OnInit {
   album$: Observable<IAlbum[]>;
 
-  constructor(private albumServic: AlbumService) {}
+  constructor(private albumService: AlbumService) {}
 
   ngOnInit() {
-    this.album$ = this.albumServic.getAlbums();
+    this.album$ = this.albumService.getAlbums();
   }
 }
