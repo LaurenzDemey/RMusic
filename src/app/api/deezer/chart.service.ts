@@ -17,6 +17,8 @@ export class ChartService implements IChartService {
         map(response => {
           const chart: IChartDto = response.json();
           const result: IChart[] = [];
+
+          // map all chart albums to an object of type IChart
           chart.albums.data.forEach(album => {
             result.push({
               type: 'album',
@@ -27,6 +29,8 @@ export class ChartService implements IChartService {
               artist: album.artist.name
             });
           });
+
+          // map all chart artists to an object of type IChart
           chart.artists.data.forEach(artist => {
             result.push({
               type: 'artist',
@@ -37,6 +41,8 @@ export class ChartService implements IChartService {
               totalFollowers: artist.nb_fan
             });
           });
+
+          // map all chart playlists to an object of type IChart
           chart.playlists.data.forEach(playlist => {
             result.push({
               type: 'playlist',
@@ -47,6 +53,8 @@ export class ChartService implements IChartService {
               totalTracks: playlist.nb_tracks
             });
           });
+
+          // map all chart tracks to an object of type IChart
           chart.tracks.data.forEach(track => {
             result.push({
               type: 'song',

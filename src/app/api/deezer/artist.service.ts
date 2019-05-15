@@ -13,9 +13,7 @@ export class ArtistService implements IArtistService {
     return this.jsonP
       .get(`https://api.deezer.com/artist/${id}?output=jsonp&callback=JSONP_CALLBACK&q=`)
       .pipe(
-        map(response => {
-          return response.json();
-        })
+          map(response => response.json())
       );
   }
 
